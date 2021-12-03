@@ -48,14 +48,14 @@ public class Main {
         }
         while(scan.hasNextLine()){
         String line = scan.nextLine();
-        System.out.println(line);
-
+        //System.out.println(line);
+        list.add(line);
              }
      scan.close();
         for (int i = 0; i < list.size(); i++) {
             String line = list.get(i);
-            float f = Float.parseFloat("line");
-            System.out.println(line + ""+f);
+            float f = Float.parseFloat(line);
+            System.out.println(line + " "+f);
         }
 
 
