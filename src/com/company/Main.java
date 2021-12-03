@@ -46,6 +46,7 @@ public class Main {
     Scanner scan = new Scanner("notes3.txt");
      while(scan.hasNextLine()){
         list.add(scan.nextLine());
+        list.add(scan.nextLine());
          System.out.print(scan.nextLine());
              }
      scan.close();
