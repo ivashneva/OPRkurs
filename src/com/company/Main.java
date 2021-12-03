@@ -52,11 +52,14 @@ public class Main {
         list.add(line);
              }
      scan.close();
+        float sum = 0;
         for (int i = 0; i < list.size(); i++) {
             String line = list.get(i);
+            sum += i;
             float f = Float.parseFloat(line);
             System.out.println(line + " "+f);
         }
+        System.out.println("Сумма равна" + " "+sum);
 
 
 }
