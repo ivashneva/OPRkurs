@@ -1,9 +1,6 @@
 package com.company;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -43,15 +40,22 @@ public class Main {
 //        }
 //    }
     ArrayList<String> list = new ArrayList<String>();
-    Scanner scan = new Scanner("notes3.txt");
-     while(scan.hasNextLine()){
+        Scanner scan = null;
+        try {
+            scan = new Scanner(new File("notes3.txt"));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        while(scan.hasNextLine()){
         String line = scan.nextLine();
-       // list.add(scan.nextLine());
-         System.out.println(line);
-         //System.out.print(scan.nextLine());
-         //пакет г.............
+        System.out.println(line);
+
              }
      scan.close();
+        for (int i = 0; i < list.size(); i++) {
+            String line = list.get(i);
+            System.out.println(line);
+        }
 }
 }
 
