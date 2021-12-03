@@ -1,8 +1,11 @@
 package com.company;
 
+import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
 
@@ -25,19 +28,26 @@ public class Main {
 //
 //            System.out.println(ex.getMessage());
 //        }
-        try(FileReader reader = new FileReader("notes3.txt"))
-        {
-            // читаем посимвольно
-            int c;
-            while((c=reader.read())!=-1){
-
-                System.out.print((char)c);
-            }
-        }
-        catch(IOException ex){
-
-            System.out.println(ex.getMessage());
-        }
+//        try(FileReader reader = new FileReader("notes3.txt"))
+//        {
+//            // читаем посимвольно
+//            int c;
+//            while((c=reader.read())!=-1){
+//
+//                System.out.print((char)c);
+//            }
+//        }
+//        catch(IOException ex){
+//
+//            System.out.println(ex.getMessage());
+//        }
+//    }
+    ArrayList<String> list = new ArrayList<String>();
+    Scanner scan = new Scanner("notes3.txt");
+     while(scan.hasNextLine()){
+        list.add(scan.nextLine());
     }
+     scan.close();
+}
 }
 
