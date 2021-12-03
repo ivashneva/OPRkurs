@@ -53,7 +53,9 @@ public class Main {
              }
      scan.close();
         float sumx = 0;
+        float sumxx = 0;
         float sumy = 0;
+        float sumyy = 0;
         float x = 0, y=0;
 
         for (int i = 0; i < list.size(); i++) {
@@ -63,12 +65,14 @@ public class Main {
            y=(Float.parseFloat(b[1]));//преобраз в число и кладем в у
 
             sumx += x;
+            sumxx += x*x;
             sumy += y;
-            System.out.println(line + " "+f);
-            System.out.println(line + " "+x +" "+y);
+            sumyy += y*y;
+            System.out.println(" "+x +" "+y);
         }
 
-        System.out.println("Сумма равна" + " "+sumx + "Сумма равна" + " "+sumy);
+        System.out.println("Сумма равна" + " "+sumx + "   " + "Сумма равна" + " "+sumy+ "   "+ "х в квадрате = " + " "+sumxx + "   " + "y в квадрате = " + " "+sumyy);
+
 
 
 
