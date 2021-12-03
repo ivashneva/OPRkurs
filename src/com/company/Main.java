@@ -54,18 +54,23 @@ public class Main {
      scan.close();
         float sum = 0;
         float sr = 0;
-        float c = 0;
+        float x = 0, y=0;
+        String line = sc.nextLine();
+        String[] b = line.split(" ");
+        floatArrayList1.add(Float.parseFloat(b[0]));
+        floatArrayList2.add(Float.parseFloat(b[1]));
         for (int i = 0; i < list.size(); i++) {
             String line = list.get(i);
             float f = Float.parseFloat(line);
             sum += f;
-            c++;
             System.out.println(line + " "+f);
         }
-        sr = sum/c;
+        sr = sum/list.size();
         System.out.println("Сумма равна" + " "+sum + "Среднее равно"+sr);
+        System.out.println(line + " "+x +" "+y);
 
 
-}
+
+    }
 }
 
