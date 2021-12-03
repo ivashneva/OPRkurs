@@ -56,7 +56,11 @@ public class Main {
         float sumxx = 0;
         float sumy = 0;
         float sumyy = 0;
+        float sumxy = 0;
         float x = 0, y=0;
+        float a = 0, b1=0;
+        float rr = 0;
+       // float e = sumxy-(sumx*sumy)/list.size();
 
         for (int i = 0; i < list.size(); i++) {
             String line = list.get(i);//берем линию
@@ -68,10 +72,18 @@ public class Main {
             sumxx += x*x;
             sumy += y;
             sumyy += y*y;
-            System.out.println(" "+x +" "+y);
+            sumxy += x*y;
+
+            a=(sumxy-(sumx)*(sumy)/list.size())/(sumxx-(sumx)*(sumx)/list.size());
+            b1=sumy/list.size()-a*(sumx/list.size());
+            rr=(sumxy-(sumx*sumy)/list.size())*(sumxy-(sumx*sumy)/list.size())/((sumxx-((sumx)*(sumx))/list.size())*(sumyy-((sumy)*(sumy))/list.size()));
+            System.out.println(" "+x +"  "+y+"  "+ x*x+"  "+y*y+"  "+x*y);
         }
 
-        System.out.println("Сумма равна" + " "+sumx + "   " + "Сумма равна" + " "+sumy+ "   "+ "х в квадрате = " + " "+sumxx + "   " + "y в квадрате = " + " "+sumyy);
+        System.out.println("Сумма равна" + " "+sumx + "  | " + "Сумма равна" + " "+sumy+ "  | "+ "х в квадрате равен " + " "+sumxx + "  | " + "y в квадрате равен " + " "+sumyy+ " |  "+ "х*y равно " +sumxy);
+
+        System.out.println("Коэффициет a равен"+ " "+a+ " | "+ "Коэффициент b равен"+" "+b1);
+        System.out.println("Величина rr равна"+ " "+rr);
 
 
 
