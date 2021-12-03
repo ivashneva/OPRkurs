@@ -54,8 +54,11 @@ public class Main {
      scan.close();
         for (int i = 0; i < list.size(); i++) {
             String line = list.get(i);
-            System.out.println(line);
+            float f = Float.parseFloat("line");
+            System.out.println(line + ""+f);
         }
+
+
 }
 }
 
