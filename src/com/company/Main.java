@@ -55,12 +55,12 @@ public class Main {
         float sum = 0;
         float sr = 0;
         float x = 0, y=0;
-        String line = sc.nextLine();
-        String[] b = line.split(" ");
-        floatArrayList1.add(Float.parseFloat(b[0]));
-        floatArrayList2.add(Float.parseFloat(b[1]));
+
         for (int i = 0; i < list.size(); i++) {
             String line = list.get(i);
+            String[] b = line.split(" ");
+            floatArrayList1.add(Float.parseFloat(b[0]));
+            floatArrayList2.add(Float.parseFloat(b[1]));
             float f = Float.parseFloat(line);
             sum += f;
             System.out.println(line + " "+f);
