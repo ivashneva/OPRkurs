@@ -49,6 +49,7 @@ public class Main {
        // list.add(scan.nextLine());
          System.out.println(line);
          //System.out.print(scan.nextLine());
+         //пакет г.............
              }
      scan.close();
 }
