@@ -53,13 +53,17 @@ public class Main {
              }
      scan.close();
         float sum = 0;
+        float sr = 0;
+        float c = 0;
         for (int i = 0; i < list.size(); i++) {
             String line = list.get(i);
-            sum += i;
             float f = Float.parseFloat(line);
+            sum += f;
+            c++;
             System.out.println(line + " "+f);
         }
-        System.out.println("Сумма равна" + " "+sum);
+        sr = sum/c;
+        System.out.println("Сумма равна" + " "+sum + "Среднее равно"+sr);
 
 
 }
