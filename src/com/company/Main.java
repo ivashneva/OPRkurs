@@ -45,9 +45,10 @@ public class Main {
     ArrayList<String> list = new ArrayList<String>();
     Scanner scan = new Scanner("notes3.txt");
      while(scan.hasNextLine()){
+        String line = scan.nextLine();
        // list.add(scan.nextLine());
-         System.out.println(scan.nextLine());
-         System.out.print(scan.nextLine());
+         System.out.println(line);
+         //System.out.print(scan.nextLine());
              }
      scan.close();
 }
