@@ -52,22 +52,24 @@ public class Main {
         list.add(line);
              }
      scan.close();
-        float sum = 0;
-        float sr = 0;
+        float sumx = 0;
+        float sumy = 0;
         float x = 0, y=0;
 
         for (int i = 0; i < list.size(); i++) {
-            String line = list.get(i);
+            String line = list.get(i);//берем линию
             String[] b = line.split(" ");
-            floatArrayList1.add(Float.parseFloat(b[0]));
-            floatArrayList2.add(Float.parseFloat(b[1]));
-            float f = Float.parseFloat(line);
-            sum += f;
+           x=(Float.parseFloat(b[0]));//преобраз в число и кладем в х
+           y=(Float.parseFloat(b[1]));//преобраз в число и кладем в у
+
+            sumx += x;
+            sumy += y;
             System.out.println(line + " "+f);
+            System.out.println(line + " "+x +" "+y);
         }
-        sr = sum/list.size();
-        System.out.println("Сумма равна" + " "+sum + "Среднее равно"+sr);
-        System.out.println(line + " "+x +" "+y);
+
+        System.out.println("Сумма равна" + " "+sumx + "Сумма равна" + " "+sumy);
+
 
 
 
