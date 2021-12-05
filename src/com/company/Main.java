@@ -5,6 +5,8 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import static com.company.Regression.LINEAR;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -43,7 +45,7 @@ public class Main {
 //test
 //        Regression regression = new Regression();
 //        regression.regression();
-          Regression.regression(Regression.LINEAR);
+          Regression.regression(LINEAR);
           Regression.regression(Regression.EXP);
 //        System.out.println("Сумма x равна" + " " + sumx + "  | " + "Сумма y равна" + " " + sumy + "  | " + "х в квадрате равен " + " " + sumxx + "  | " + "y в квадрате равен " + " " + sumyy + " |  " + "х*y равно " + sumxy);
 //
