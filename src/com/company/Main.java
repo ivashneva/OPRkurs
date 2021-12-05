@@ -42,7 +42,7 @@ public class Main {
 //    }
 
         Regression regression = new Regression();
-        System.out.print(regression.regression());
+        regression.regression();
 //        System.out.println("Сумма x равна" + " " + sumx + "  | " + "Сумма y равна" + " " + sumy + "  | " + "х в квадрате равен " + " " + sumxx + "  | " + "y в квадрате равен " + " " + sumyy + " |  " + "х*y равно " + sumxy);
 //
 //        System.out.println("Коэффициет a равен" + " " + a + " | " + "Коэффициент b равен" + " " + b1);

@@ -6,9 +6,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Regression {
-    static int linear;
-    static int exp;
-    public float regression() {
+    public static int linear;
+    public static int exp;
+    public static void regression() {
         ArrayList<String> list = new ArrayList<String>();
         Scanner scan = null;
         try {
@@ -56,7 +56,7 @@ public class Regression {
 
         System.out.println("Коэффициет a равен" + " " + a + " | " + "Коэффициент b равен" + " " + b1);
         System.out.println("Величина rr равна" + " " + rr);
-return 0;
+
     }
 
 }
