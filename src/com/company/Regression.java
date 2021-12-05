@@ -6,11 +6,11 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Regression {
-    private static String characterType;
-   // String characterType ="неизвестная";
+
+    Resultmy resultmy = new Resultmy();
     public static final int LINEAR = 1;
     public static final int EXP = 2;
-    public static void regression(int typeregression) {
+    public Resultmy regression(int typeregression) {
         ArrayList<String> list = new ArrayList<String>();
         Scanner scan = null;
         String nameFile = "";
@@ -116,6 +116,10 @@ public class Regression {
         System.out.println("Коэффициет a равен" + " " + a + " | " + "Коэффициент b равен" + " " + b1);
         System.out.println("Величина rr равна" + " " + rr);
 
+        resultmy.setA(a);
+        resultmy.setB(b1);
+        resultmy.setRr(rr);
+        return resultmy;
     }
 
 }

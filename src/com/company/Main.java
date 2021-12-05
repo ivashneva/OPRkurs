@@ -43,10 +43,13 @@ public class Main {
 //        }
 //    }
 //test
-//        Regression regression = new Regression();
+        Regression regression = new Regression();
 //        regression.regression();
-          Regression.regression(LINEAR);
-          Regression.regression(Regression.EXP);
+        Resultmy resultmy = regression.regression(LINEAR);
+
+        Resultmy ch = regression.regression(Regression.EXP);
+        System.out.println(resultmy);
+        System.out.println(ch);
 //        System.out.println("Сумма x равна" + " " + sumx + "  | " + "Сумма y равна" + " " + sumy + "  | " + "х в квадрате равен " + " " + sumxx + "  | " + "y в квадрате равен " + " " + sumyy + " |  " + "х*y равно " + sumxy);
 //
 //        System.out.println("Коэффициет a равен" + " " + a + " | " + "Коэффициент b равен" + " " + b1);
