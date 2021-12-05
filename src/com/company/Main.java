@@ -41,8 +41,9 @@ public class Main {
 //        }
 //    }
 
-        Regression regression = new Regression();
-        regression.regression();
+//        Regression regression = new Regression();
+//        regression.regression();
+          Regression.regression();
 //        System.out.println("Сумма x равна" + " " + sumx + "  | " + "Сумма y равна" + " " + sumy + "  | " + "х в квадрате равен " + " " + sumxx + "  | " + "y в квадрате равен " + " " + sumyy + " |  " + "х*y равно " + sumxy);
 //
 //        System.out.println("Коэффициет a равен" + " " + a + " | " + "Коэффициент b равен" + " " + b1);

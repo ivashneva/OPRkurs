@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Regression {
-    public static int linear;
-    public static int exp;
+    public static final int LINEAR = 1;
+    public static final int EXP = 2;
     public static void regression() {
         ArrayList<String> list = new ArrayList<String>();
         Scanner scan = null;
