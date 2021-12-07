@@ -50,7 +50,7 @@ public class Regression {
         } catch (
                 FileNotFoundException e) {
 
-            System.exit(4);
+//            System.exit(4);
             e.printStackTrace();
 
         }
@@ -133,19 +133,17 @@ public class Regression {
         switch (typeregression) {
             case LINEAR:
                 y = a * x + b;
-                return y;
-                break;
+            break;
             case EXP:
-                y = b * Math.exp(a * x) ;
-                return y;
+                b = (float) Math.exp(b);
+                y = (float) (b * Math.exp(a * x));
             default:
-
                 break;
         }
 
-
-
+    return y;
     }
+
 
 }
 
