@@ -10,19 +10,20 @@ public class Regression {
     Resultmy resultmy = new Resultmy();
     public static final int LINEAR = 1;
     public static final int EXP = 2;
+
     public Resultmy regression(int typeregression) {
         ArrayList<String> list = new ArrayList<String>();
         Scanner scan = null;
         String nameFile = "";
-        switch (typeregression){
+        switch (typeregression) {
             case LINEAR:
 
-               nameFile= "Линейная_регрессия.txt";
+                nameFile = "Линейная_регрессия.txt";
 
                 break;
             case EXP:
 
-                nameFile= "Экспоненциальная.txt";
+                nameFile = "Экспоненциальная.txt";
 
             default:
 
@@ -77,14 +78,13 @@ public class Regression {
             y = (Float.parseFloat(bbuf[1]));//преобраз в число и кладем в у
 
 
-            switch (typeregression){
+            switch (typeregression) {
                 case LINEAR:
-
 
 
                     break;
                 case EXP:
-                    y= (float) Math.log(y);
+                    y = (float) Math.log(y);
 //                case 3rertrP:
 //                    x= (float) Math.log(y);
 //                    x= (float) Math.log(y);
@@ -94,9 +94,6 @@ public class Regression {
 
                     break;
             }
-
-
-
 
 
             sumx += x;
@@ -109,15 +106,14 @@ public class Regression {
             b = sumy / list.size() - a * (sumx / list.size());
             rr = (sumxy - (sumx * sumy) / list.size()) * (sumxy - (sumx * sumy) / list.size()) / ((sumxx - ((sumx) * (sumx)) / list.size()) * (sumyy - ((sumy) * (sumy)) / list.size()));
             System.out.println(" " + x + "  " + y + "  " + x * x + "  " + y * y + "  " + x * y);
-
-            for (int j = 0; j < 1; j++) {
-                String line1 = list.get(i);//берем линию
-                String[] bbuf = line.split(" ");
-                System.out.println("x равно" + " " + x+ "  "+ "y равно" + y );
-                float yrasch = calculatey(x);
-            }
-
         }
+        for (int j = 0; j < 1; j++) {
+            String line1 = list.get(j);//берем линию
+            String[] bbuf = line1.split(" ");
+            System.out.println("x равно" + " " + x + "  " + "y равно" + y);
+           // float yrasch = calculatey(x);
+        }
+
 
         System.out.println("Сумма x равна" + " " + sumx + "  | " + "Сумма y равна" + " " + sumy + "  | " + "х в квадрате равен " + " " + sumxx + "  | " + "y в квадрате равен " + " " + sumyy + " |  " + "х*y равно " + sumxy);
 
@@ -130,8 +126,8 @@ public class Regression {
         return resultmy;
     }
 
-    private float calculatey(float x,float a,float b) {
-        float y = a*x+b;
+    private float calculatey(float x, float a, float b) {
+        float y = a * x + b;
 
         return y;
     }
