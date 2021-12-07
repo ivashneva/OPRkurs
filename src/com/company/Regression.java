@@ -113,7 +113,7 @@ public class Regression {
             x = (Float.parseFloat(bbuf[0]));//преобраз в число и кладем в х
             y = (Float.parseFloat(bbuf[1]));//преобраз в число и кладем в у
             float yrasch = calculatey(x, a, b);
-            System.out.println("------x равно" + " " + x + "  " + "y равно" + y + "  " +"y рассчетное равно" + yrasch);
+            System.out.println("------x равно" + " " + x + "  " + "y равно " + y + "  " +"y рассчетное равно " + yrasch);
         }
 
 
