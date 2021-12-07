@@ -112,7 +112,7 @@ public class Regression {
             String[] bbuf = line1.split(" ");
             x = (Float.parseFloat(bbuf[0]));//преобраз в число и кладем в х
             y = (Float.parseFloat(bbuf[1]));//преобраз в число и кладем в у
-            float yrasch = calculately(x, a, b);
+            float yrasch = calculately(x, a, b, typeregression);
             System.out.println("------x равно " + x + "  " + "y равно " + y + "  " +"y рассчетное равно " + yrasch);
         }
 
@@ -128,14 +128,15 @@ public class Regression {
         return resultmy;
     }
 
-    private float calculately(float x, float a, float b) {
-        switch () {
+    private float calculately(float x, float a, float b, int typeregression) {
+        float y = 0;
+        switch (typeregression) {
             case LINEAR:
-                float y = a * x + b;
+                y = a * x + b;
                 return y;
                 break;
             case EXP:
-                float y = Math.pow(b * Math.exp(), a * x);
+                y = b * Math.exp(a * x) ;
                 return y;
             default:
 
