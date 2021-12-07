@@ -107,11 +107,13 @@ public class Regression {
             rr = (sumxy - (sumx * sumy) / list.size()) * (sumxy - (sumx * sumy) / list.size()) / ((sumxx - ((sumx) * (sumx)) / list.size()) * (sumyy - ((sumy) * (sumy)) / list.size()));
             System.out.println(" " + x + "  " + y + "  " + x * x + "  " + y * y + "  " + x * y);
         }
-        for (int j = 0; j < 1; j++) {
+        for (int j = 0; j < list.size(); j++) {
             String line1 = list.get(j);//берем линию
             String[] bbuf = line1.split(" ");
-            System.out.println("x равно" + " " + x + "  " + "y равно" + y);
-           // float yrasch = calculatey(x);
+            x = (Float.parseFloat(bbuf[0]));//преобраз в число и кладем в х
+            y = (Float.parseFloat(bbuf[1]));//преобраз в число и кладем в у
+            float yrasch = calculatey(x, a, b);
+            System.out.println("------x равно" + " " + x + "  " + "y равно" + y + "  " +"y рассчетное равно" + yrasch);
         }
 
 
