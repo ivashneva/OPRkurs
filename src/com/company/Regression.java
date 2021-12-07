@@ -66,15 +66,15 @@ public class Regression {
         float sumyy = 0;
         float sumxy = 0;
         float x = 0, y = 0;
-        float a = 0, b1 = 0;
+        float a = 0, b = 0;
         float rr = 0;
         // float e = sumxy-(sumx*sumy)/list.size();
 
         for (int i = 0; i < list.size(); i++) {
             String line = list.get(i);//берем линию
-            String[] b = line.split(" ");
-            x = (Float.parseFloat(b[0]));//преобраз в число и кладем в х
-            y = (Float.parseFloat(b[1]));//преобраз в число и кладем в у
+            String[] bbuf = line.split(" ");
+            x = (Float.parseFloat(bbuf[0]));//преобраз в число и кладем в х
+            y = (Float.parseFloat(bbuf[1]));//преобраз в число и кладем в у
 
 
             switch (typeregression){
@@ -98,6 +98,7 @@ public class Regression {
 
 
 
+
             sumx += x;
             sumxx += x * x;
             sumy += y;
@@ -105,21 +106,34 @@ public class Regression {
             sumxy += x * y;
 
             a = (sumxy - (sumx) * (sumy) / list.size()) / (sumxx - (sumx) * (sumx) / list.size());
-            b1 = sumy / list.size() - a * (sumx / list.size());
+            b = sumy / list.size() - a * (sumx / list.size());
             rr = (sumxy - (sumx * sumy) / list.size()) * (sumxy - (sumx * sumy) / list.size()) / ((sumxx - ((sumx) * (sumx)) / list.size()) * (sumyy - ((sumy) * (sumy)) / list.size()));
             System.out.println(" " + x + "  " + y + "  " + x * x + "  " + y * y + "  " + x * y);
 
+            for (int j = 0; j < 1; j++) {
+                String line1 = list.get(i);//берем линию
+                String[] bbuf = line.split(" ");
+                System.out.println("x равно" + " " + x+ "  "+ "y равно" + y );
+                float yrasch = calculatey(x);
+            }
 
         }
+
         System.out.println("Сумма x равна" + " " + sumx + "  | " + "Сумма y равна" + " " + sumy + "  | " + "х в квадрате равен " + " " + sumxx + "  | " + "y в квадрате равен " + " " + sumyy + " |  " + "х*y равно " + sumxy);
 
-        System.out.println("Коэффициет a равен" + " " + a + " | " + "Коэффициент b равен" + " " + b1);
+        System.out.println("Коэффициет a равен" + " " + a + " | " + "Коэффициент b равен" + " " + b);
         System.out.println("Величина rr равна" + " " + rr);
 
         resultmy.setA(a);
-        resultmy.setB(b1);
+        resultmy.setB(b);
         resultmy.setRr(rr);
         return resultmy;
+    }
+
+    private float calculatey(float x,float a,float b) {
+        float y = a*x+b;
+
+        return y;
     }
 
 }
