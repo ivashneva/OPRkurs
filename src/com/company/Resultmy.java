@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.ArrayList;
+
 public class Resultmy {
     float a, b, rr;
 
@@ -35,4 +37,33 @@ public class Resultmy {
                 ", rr=" + rr +
                 '}';
     }
+
+    public ArrayList<String> getX() {
+        return x;
+    }
+
+    public void setX(ArrayList<String> x) {
+        this.x = x;
+    }
+
+    public ArrayList<String> getY() {
+        return y;
+    }
+
+    public void setY(ArrayList<String> y) {
+        this.y = y;
+    }
+
+    public ArrayList<String> getYrasch() {
+        return yrasch;
+    }
+
+    public void setYrasch(ArrayList<String> yrasch) {
+        this.yrasch = yrasch;
+    }
+
+    ArrayList<String> x = new ArrayList<String>();
+    ArrayList<String> y = new ArrayList<String>();
+    ArrayList<String> yrasch = new ArrayList<String>();
+
 }

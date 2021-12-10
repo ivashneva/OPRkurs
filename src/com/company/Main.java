@@ -50,6 +50,7 @@ public class Main {
         Resultmy ch = regression.regression(Regression.EXP);
         System.out.println(resultmy);
         System.out.println(ch);
+        System.out.println(" x равно " + x);
 //        System.out.println("Сумма x равна" + " " + sumx + "  | " + "Сумма y равна" + " " + sumy + "  | " + "х в квадрате равен " + " " + sumxx + "  | " + "y в квадрате равен " + " " + sumyy + " |  " + "х*y равно " + sumxy);
 //
 //        System.out.println("Коэффициет a равен" + " " + a + " | " + "Коэффициент b равен" + " " + b1);
