@@ -38,32 +38,32 @@ public class Resultmy {
                 '}';
     }
 
-    public ArrayList<String> getX() {
+    public ArrayList<Float> getX() {
         return x;
     }
 
-    public void setX(ArrayList<String> x) {
+    public void setX(ArrayList<Float> x) {
         this.x = x;
     }
 
-    public ArrayList<String> getY() {
+    public ArrayList<Float> getY() {
         return y;
     }
 
-    public void setY(ArrayList<String> y) {
+    public void setY(ArrayList<Float> y) {
         this.y = y;
     }
 
-    public ArrayList<String> getYrasch() {
+    public ArrayList<Float> getYrasch() {
         return yrasch;
     }
 
-    public void setYrasch(ArrayList<String> yrasch) {
+    public void setYrasch(ArrayList<Float> yrasch) {
         this.yrasch = yrasch;
     }
 
-    ArrayList<String> x = new ArrayList<String>();
-    ArrayList<String> y = new ArrayList<String>();
-    ArrayList<String> yrasch = new ArrayList<String>();
+    ArrayList<Float> x = new ArrayList<Float>();
+    ArrayList<Float> y = new ArrayList<Float>();
+    ArrayList<Float> yrasch = new ArrayList<Float>();
 
 }

@@ -76,7 +76,10 @@ public class Regression {
             String[] bbuf = line.split(" ");
             x = (Float.parseFloat(bbuf[0]));//преобраз в число и кладем в х
             y = (Float.parseFloat(bbuf[1]));//преобраз в число и кладем в у
-
+            float yrasch = calculately(x, a, b, typeregression);
+            resultmy.x.add(x);
+            resultmy.y.add(y);
+            resultmy.yrasch.add(yrasch);
 
             switch (typeregression) {
                 case LINEAR:
